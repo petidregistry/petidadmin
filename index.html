@@ -97,7 +97,8 @@
             backdrop-filter: blur(12px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: breatheCard 4s ease-in-out infinite;
+            /* Increased breathing animation duration to 7s to match the border */
+            animation: breatheCard 7s ease-in-out infinite;
         }
 
         /* Edge-only rotating gradient using CSS masks */
@@ -111,7 +112,8 @@
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            animation: spinStrip 4s linear infinite;
+            /* Increased spin animation duration from 4s to 7s */
+            animation: spinStrip 7s linear infinite;
             pointer-events: none;
             transition: opacity 0.4s;
         }
@@ -331,7 +333,7 @@
         const API_URL = 'https://script.google.com/macros/s/AKfycbzQk3aW5tdVPW3GzLC_6D4haYxEygKJayxbYHmHnChM9_9vSITsuVuO5RR255my4K-3Ag/exec';
         let globalData = [];
         let map;             
-        let markersLayer;    
+        let markersLayer;  
 
         async function init() {
             try {
